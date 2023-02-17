@@ -63,6 +63,8 @@ Pods/
 # Fish local config
 .config/fish/config-local.fish
 .config/fish/fish_variables.x86_64
+# I added this because something is updated in it WHEN I commit and it shows up immediately after a commit
+.config/fish/fish_variables
 
 # Karabiner
 .config/karabiner/automatic_backups
