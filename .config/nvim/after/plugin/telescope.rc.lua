@@ -42,6 +42,7 @@ telescope.setup {
 
 telescope.load_extension("file_browser")
 
+local opts = { noremap = true, silent = true }
 vim.keymap.set('n', ';f',
   function()
     builtin.find_files({
@@ -49,9 +50,10 @@ vim.keymap.set('n', ';f',
       hidden = true
     })
   end)
-vim.keymap.set('n', ';r', function()
-  builtin.live_grep()
-end)
+-- vim.keymap.set('n', ';r', function()
+--   builtin.live_grep()
+-- end)
+vim.keymap.set('n', ';r', '<cmd>lua require("telescope.builtin").live_grep()<cr>', opts)
 vim.keymap.set('n', '\\\\', function()
   builtin.buffers()
 end)
