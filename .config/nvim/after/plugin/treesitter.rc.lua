@@ -21,7 +21,10 @@ ts.setup {
     "swift",
     "css",
     "html",
-    "lua"
+    "lua",
+    "elixir",
+    "heex",
+    "eex",
   },
   autotag = {
     enable = true,

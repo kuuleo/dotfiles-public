@@ -27,3 +27,8 @@ export GPG_TTY=$(tty)
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# postgres
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"

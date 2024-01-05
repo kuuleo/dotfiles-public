@@ -136,7 +136,7 @@ nvim_lsp.astro.setup {
   capabilities = capabilities
 }
 ]]
-nvim_lsp.elixirls.setup {
+--[[ nvim_lsp.elixirls.setup {
   cmd = { "/Users/leoku/.elixir-ls/language_server.sh" },
   capabilities = capabilities,
   flags = {
@@ -147,7 +147,7 @@ nvim_lsp.elixirls.setup {
     fetchDeps = false,
   }
 }
-
+]]
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
