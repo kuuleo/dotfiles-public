@@ -1,17 +1,10 @@
-require('kuuleo.base')
-require('kuuleo.highlights')
-require('kuuleo.maps')
-require('kuuleo.plugins')
-
-local has = vim.fn.has
-local is_mac = has "macunix"
-local is_win = has "win32"
-
-if is_mac then
-  require('kuuleo.macos')
-end
-if is_win then
-  require('kuuleo.windows')
+if vim.loader then
+	vim.loader.enable()
 end
 
-vim.lsp.set_log_level("debug")
+_G.dd = function(...)
+	require("util.debug").dump(...)
+end
+vim.print = _G.dd
+
+require("config.lazy")
